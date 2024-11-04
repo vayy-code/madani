@@ -1,0 +1,382 @@
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #ffffff;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
+    
+}
+.logo {
+    display: flex;               /* Menggunakan flexbox untuk menyusun elemen secara horizontal */
+    align-items: center;        /* Menyelaraskan item secara vertikal di tengah */
+    margin: 20px 0;            /* Memberikan jarak atas dan bawah */
+}
+
+.logo img {
+    margin-right: 10px;        /* Memberikan jarak antara gambar dan teks */
+}
+
+.logo p {
+    font-size: 15px;           /* Ukuran font */
+    color: #ffffff;               /* Warna teks */
+    margin: 0;                 /* Menghapus margin default pada paragraf */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.jumbotron {
+    position: relative; /* Agar elemen anak bisa diposisikan relatif */
+    overflow: hidden;  /* Menghindari gambar meluap keluar elemen */
+}
+
+.slider {
+    width: 100vw;      /* Mengatur lebar slider penuh */
+    height: 100vh;     /* Mengatur tinggi slider penuh */
+    display: flex;     /* Menyusun gambar secara horizontal */
+    transition: transform 0.5s ease; /* Animasi transisi */
+}
+
+.slider img {
+    width: 100%;       /* Mengatur lebar gambar penuh */
+    height: 100%;      /* Mengatur tinggi gambar penuh */
+    object-fit: cover; /* Memastikan gambar memenuhi ruang tanpa merusak aspek rasio */
+}
+
+
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+/* body {
+    background: linear-gradient(135deg, #1e90ff, #ffdd00);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container */
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #1e90ff;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Additional Links */
+.container .additional-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.container .additional-links a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.container .additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+
+
+/* Style untuk judul dashboard */
+h2 {
+    font-size: 28px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style untuk table container */
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Style untuk table header */
+.styled-table thead tr {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Style untuk table row */
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Style untuk table row hover */
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style untuk alternating row color */
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style untuk table footer */
+.styled-table tfoot tr {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/* Style untuk pesan sukses dan error */
+.success, .error {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}
+
+/* Style untuk form */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+/* Style untuk label */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Style untuk input dan textarea */
+input[type="date"],
+input[type="number"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style untuk input file */
+input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+/* Style untuk textarea */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Style untuk tombol submit */
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover untuk tombol */
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Style untuk tombol submit */
+.button {
+    background-color: #007bff;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline;
+}
+
+/* Efek hover untuk tombol */
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Style untuk tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+}
+
+table td img {
+    border-radius: 8px;
+}
+
+
+/* Style untuk halaman detail */
+main table {
+    
+    margin: 0 auto;
+}
+
+main table th {
+    width: 150px;
+    
+}
